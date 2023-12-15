@@ -32,6 +32,8 @@ services:
 
   postgresdb:
     image: postgres:13
+    ports:
+      - ${DB_PORT-5432}:${DB_PORT-5432}
     networks:
       backend:
         aliases:
